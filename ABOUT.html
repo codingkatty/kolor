@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolor - History</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="C:\Users\Admin\Desktop\My project website\favicon_io kolor\favicon.ico">
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        #header {
+            width: 100%;
+            height: 70px;
+            background-color: #65211e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+        #header h2 {
+            margin: 0;
+            font-size: 28px;
+            margin-left:20px;
+        }
+        #header a {
+            color: wheat;
+            text-decoration: none;
+        }
+        #header a:hover {
+            color: #86945e;
+        }
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section {
+            margin-bottom: 60px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        .section p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .col1 { 
+            color: #65211e; 
+        }
+        .col2 { 
+            color: #7e9081; 
+        }
+        .col3 { 
+            color: #223249; 
+        }
+        .col4 { 
+            color: #c9ab82; 
+        }
+        .learn-more {
+            display: inline-block;
+            margin-top: 20px;
+            color: #65211e;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 12px 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .learn-more::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        .learn-more:hover {
+            color: #7e9081;
+            border: 2px solid #7e9081;
+            border-radius: 30px;
+        }
+        .learn-more:hover::before {
+            left: 100%;
+        }
+        .designer-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2><a href="KOLOR_WEBSITE.html">kolor</a></h2>
+    </div>
+
+    <div class="content">
+        <div id="section1" class="section">
+            <h2 class="col1">The Birth of Kolor</h2>
+            <p>Kolor, a Japanese fashion brand, was founded in 2004 by Junichi Abe. With a rich background in pattern making and a keen eye for innovative design, Abe set out to create a brand that would redefine contemporary fashion.</p>
+            <a href="#section2" class="learn-more">Learn more</a>
+        </div>
+
+        <div id="section2" class="section">
+            <h2 class="col2">Junichi Abe: The Visionary Designer</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTrwTFpK_idsCHng40IiLAHGJcAApTfRyIOw&s" alt="Junichi Abe" class="designer-image">
+            <p>Junichi Abe, the creative force behind Kolor, honed his skills at Comme des Garçons and Junya Watanabe. His expertise in pattern making and fabric manipulation has become the cornerstone of Kolor's unique aesthetic.</p>
+            <a href="#section3" class="learn-more">Learn more</a>
+        </div>
+
+        <div id="section3" class="section">
+            <h2 class="col3">Kolor's Design Philosophy</h2>
+            <p>Kolor is renowned for its sophisticated approach to casual wear. The brand seamlessly blends high-end tailoring with sportswear elements, creating a distinctive style that appeals to fashion-forward individuals worldwide.</p>
+            <a href="#section4" class="learn-more">Learn more</a>
+        </div>
+
+        <div id="section4" class="section">
+            <h2 class="col4">Global Recognition and Expansion</h2>
+            <p>Since its inception, Kolor has gained international acclaim for its innovative designs and quality craftsmanship. The brand has expanded its presence globally, showcasing collections at Paris Fashion Week and establishing a loyal following among fashion enthusiasts.</p>
+            <a href="#section1" class="learn-more">Back to top</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        });
+    </script>
+</body>
+</html>

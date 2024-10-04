@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kolor</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\Admin\Desktop\My project website\favicon_io kolor\favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://kit.fontawesome.com/0b8ac9bac4.js" crossorigin="anonymous"></script>
+
+        <style>
+            .container {
+                width: 173px;
+                height: 100vh;
+                overflow: hidden;
+                position: fixed;
+                left: 0;
+                top: 0;
+            }
+            .photobanner {
+                display: flex;
+                flex-direction: column;
+                animation: scroll 30s linear infinite;
+                position: relative;
+            }
+            .image-container {
+                width: 173px;
+                height: 260px;
+                overflow: hidden;
+                position: relative;
+            }
+            .image-container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.3);
+                pointer-events: none;
+            }
+            .photobanner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            .image-container:hover img {
+                transform: scale(1.1);
+            }
+            .gradient {
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 50px;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+            }
+            .gradient.top {
+                top: 0;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+            }
+            .gradient.bottom {
+                bottom: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0));
+            }
+            @keyframes scroll {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(-50%);
+                }
+            }
+            .photobanner {
+                filter:grayscale(80%);
+                transition: filter 2s;
+                display:inline-block;
+            }
+            .photobanner:hover {
+                filter:grayscale(0%);
+            }
+            .photobanner img {
+                display:block;
+                outline: 10px solid black;
+                transition:transform 3s;
+                position:relative;
+            }
+            .photobanner img:hover {
+                transform:scale(1.1);
+            }
+            #pregradient {
+                margin-top:0px;
+            }
+            #gradient1 {
+                background-image: linear-gradient(#00000000, #65211e, #00000000);
+                opacity:50%;
+                margin-top:50px;
+            }
+            #gradient2 {
+                background-image: linear-gradient(#00000000, #7e9081, #00000000);
+                opacity:50%;
+                margin-top:250px;
+            }
+            #gradient3 {
+                background-image: linear-gradient(#00000000, #223249, #00000000);
+                opacity:50%;
+                margin-top:450px;
+            }
+            #gradient4 {
+                background-image: linear-gradient(#00000000, #c9ab82, #00000000);
+                opacity:50%;
+                margin-top:650px;
+            }
+            .gradient {
+                z-index:5;
+                position:fixed;
+                width:173px;
+                height:150px;
+                display:block;
+            }
+            body {
+                background-color:#faf0e6;
+                font-family: "Noto Serif", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-variation-settings:
+                    "wdth" 100;
+            }
+            .col1 {
+                color:#65211e;
+            }
+            .col2 {
+                color:#7e9081;
+            }
+            .col3 {
+                color:#223249;
+            }
+            .col4 {
+                color:#c9ab82;
+            }
+            a {
+                cursor:pointer;
+            }
+            a:hover {
+                color:#86945e;
+            }
+            div a {
+                text-decoration:none;
+            }
+            @media screen and (max-width: 1200px) {
+                .container {
+                    width: 130px;
+                }
+                .image-container {
+                    width: 130px;
+                    height: 195px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                .container {
+                    width: 100px;
+                }
+                .image-container {
+                    width: 100px;
+                    height: 150px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .container {
+                    width: 80px;
+                }
+                .image-container {
+                    width: 80px;
+                    height: 120px;
+                }
+            }
+            @media screen and (max-width: 576px) {
+                .container {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    overflow-x: auto;
+                }
+                .photobanner {
+                    flex-direction: row;
+                    animation: scroll-horizontal 30s linear infinite;
+                }
+                .image-container {
+                    width: 80px;
+                    height: 120px;
+                    flex-shrink: 0;
+                }
+                .gradient {
+                    display: none;
+                }
+                @keyframes scroll-horizontal {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+            }
+            .main-content {
+                margin-left: 173px; 
+            }
+            @media screen and (max-width: 1200px) {
+                .main-content {
+                    margin-left: 130px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                .main-content {
+                    margin-left: 100px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .main-content {
+                    margin-left: 80px;
+                }
+            }
+            @media screen and (max-width: 576px) {
+                .main-content {
+                    margin-left: 0;
+                    padding-top: 120px; 
+                }
+            }
+            #whitehue {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.2);
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body style="overflow:clip;margin:0px;padding:0px;width:100%;">
+
+    <div id="pregradient"></div>
+    <div id="gradient1" class="gradient"></div>
+    <div id="gradient2" class="gradient"></div>
+    <div id="gradient3" class="gradient"></div>
+    <div id="gradient4" class="gradient"></div>
+
+    <div class="banner-wrapper">
+        <div class="gradient top"></div>
+        <div class="container" id="bannerContainer">
+            <div class="photobanner">
+                <div class="image-container">
+                    <img class="first" src="https://kolor.jp/wp/wp-content/uploads/2024/06/06-173x260.jpg" alt="">
+                    <div id="whitehue"></div>
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/20-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/19-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/18-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/17-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/06-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/07-1-173x260.jpg" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="https://kolor.jp/wp/wp-content/uploads/2024/06/27-173x260.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="gradient bottom"></div>
+    </div>
+
+    <div style="float:center;width:400px;;margin:0 auto;margin-left:25%;margin-top:150px;position:fixed;">
+            <h3 style="font-size:30px;color:#d0b084;">KOLOR: Fan Edition</h3> <hr style="height:5px;background-color:#65211e;">
+            <p style="font-size:20px;">
+                <b class="col2"> Shop Now </b> <br><br>
+                <a class="col2" href="SHOPW.html" style="text-decoration:none;">WOMEN</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a class="col2" href="SHOPM.html">MEN</a> 
+
+                <hr style="height:5px;background-color:#7e9081;">
+
+                <a class="col3" href="ABOUT.html">ABOUT</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="col3" href="GAME.html">MINIGAME</a> <br>
+
+                <hr style="height:5px;background-color:#223249;"> 
+
+                <a class="col4" href="CONTACT.html" style="text-decoration:none;">CONTACT US &nbsp;&nbsp;<i style='font-size:24px' class='fab'>&#xf082;</i>&nbsp;<i style='font-size:24px' class='fab'>&#xf16d;</i></a> 
+            </p>  
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('bannerContainer');
+            const gradients = container.querySelectorAll('.gradient');
+            const photobanner = container.querySelector('.photobanner');
+
+            photobanner.addEventListener('mousemove', function(e) {
+                const rect = container.getBoundingClientRect();
+                const mouseY = e.clientY - rect.top;
+                const containerHeight = rect.height;
+
+                if (mouseY < 50 || mouseY > containerHeight - 50) {
+                    gradients.forEach(g => g.style.opacity = '1');
+                } else {
+                    gradients.forEach(g => g.style.opacity = '0');
+                }
+            });
+
+            photobanner.addEventListener('mouseleave', function() {
+                gradients.forEach(g => g.style.opacity = '1');
+            });
+        });
+    </script>
+
+    </body>
+</html>
