@@ -6,6 +6,6 @@ Recreating the website [kolor.jp](https://kolor.jp). PBL assignment of LIM XIN Y
 
 - about
 - contact
-- game (scratch by [@trixirita](https://scratch.mit.edu/users/trixirita/)
+- game (scratch by [@trixirita](https://scratch.mit.edu/users/trixirita/))
 - shop
 - main page
