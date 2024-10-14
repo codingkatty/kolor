@@ -1,540 +1,825 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>kolor SHOP - Men</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+    <title>kolor SHOP - Men</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <script src="https://kit.fontawesome.com/0b8ac9bac4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-        <style>
-            body {
-                background-color:#faf0e6;
-                font-family: "Noto Serif", serif;
-                font-optical-sizing: auto;
-                font-weight: 400;
-                font-style: normal;
-                font-variation-settings: "wdth" 100;
-            }
-            #header {
-                width:100%;
-                height:50px;
-                background-color:#65211e;
-                display:flex;
-                justify-content:flex-end;
-                position:sticky;
-                top:0;
-                z-index:3;
-            }
-            #header h2{
-                margin:10px;
-            }
-            #header a {
-                color:wheat;
-                text-decoration:none;
-            }
-            #header i {
-                margin:10px;
-                justify-content:space-between;
-                flex-grow:1;
-            }
-            .col1 {
-                color:#65211e;
-            }
-            .col2 {
-                color:#7e9081;
-            }
-            .col3 {
-                color:#223249;
-            }
-            .col4 {
-                color:#c9ab82;
-            }
-            a {
-                cursor:pointer;
-            }
-            #header a:hover {
-                color:#86945e;
-            }
-            #banner {
-                width:100%;
-                height:200px;
-                object-fit:cover;
-            }
-            .imgcontainer {
-                position:relative;
-                overflow:hidden;
-                max-width:242px;
-                max-height:365px;
-                width:25%;
-                height:auto;
-                float:left;
-                margin:0 auto;
-                margin-left:20px;
-                margin-right:20px;
-            }
-            .dummycontainer {
-                position:relative;
-                overflow:hidden;
-                max-width:242px;
-                max-height:365px;
-                width:25%;
-                height:auto;
-                float:left;
-                margin:0 auto;
-                margin-left:20px;
-                margin-right:20px;
-            }
-            .imgcontainer img {
-                transition:transform 0.3s ease;
-            }
-            .zoomimg {
-                max-width:242px;
-                max-height:365px;
-                width:100%;
-                height:auto;
-            }
-            .zoomimg:hover {
-                transform:scale(1.2);
-            }
-            .dummy {
-                max-width:242px;
-                max-height:365px;
-                width:100%;
-                height:auto;
-                filter:grayscale(70%);
-                opacity:50%;
-            }
-            #page-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-                padding: 40px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-            .grid-item {
-                background-color: #fff;
-                border-radius: 15px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-                transition: transform 0.3s ease;
-                width: 100%;
-            }
-            .grid-item:hover {
-                transform: translateY(-5px);
-            }
-            .grid-item img {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-            }
-            .item-details {
-                padding: 20px;
-            }
-            .grid-item p {
-                font-weight: bold;
-                margin-bottom: 15px;
-                font-size: 18px;
-            }
-            .grid-item button {
-                background-color: #65211e;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                width: 100%;
-                font-size: 16px;
-            }
-            .grid-item button:hover {
-                background-color: #86945e;
-            }
-            #cart {
-                z-index: 2;
-                width: 350px;
-                height: 500px;
-                right: 20px;
-                top: 70px;
-                background-color: #fff;
-                position: fixed;
-                border-radius: 15px;
-                overflow: auto;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-            }
-            .itemCart {
-                display: flex;
-                align-items: center;
-                padding: 15px 0;
-                border-bottom: 1px solid #eee;
-            }
-            .itemCart img {
-                width: 80px;
-                height: 80px;
-                object-fit: cover;
-                border-radius: 8px;
-                margin-right: 15px;
-            }
-            .itemCart h4 {
-                margin: 0 0 5px 0;
-                font-size: 16px;
-            }
-            .itemCart button {
-                background-color: #ff4d4d;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-            .itemCart button:hover {
-                background-color: #ff3333;
-            }
-            i {
-                cursor:pointer;
-            }
-            .itemCart {
-                padding: 10px;
-                border-bottom: 1px solid #ccc;
-            }
-            .itemCart img {
-                width: 100px;
-                height: 100px;
-                object-fit:cover;
-            }
-            .itemCart h4 {
-                margin-bottom: 5px;
-            }
-            .itemCart {
-                opacity:100%;
-            }      
-        </style>
-    </head>
-    <body style="margin:0px;padding:0px;width:100%;">
-        <div id="header">
-            <h2><a href="index.html">kolor</a></h2> 
-            <i style='font-size:24px;color:#c9ab82;' class='fas' align="right" onclick="cartshow();">&#xf07a;</i>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://kit.fontawesome.com/0b8ac9bac4.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #faf0e6;
+            font-family: "Noto Serif", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        #header {
+            width: 100%;
+            height: 50px;
+            background-color: #65211e;
+            display: flex;
+            justify-content: flex-end;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+
+        #header h2 {
+            margin: 10px;
+        }
+
+        #header a {
+            color: wheat;
+            text-decoration: none;
+        }
+
+        #header i {
+            margin: 10px;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .col1 {
+            color: #65211e;
+        }
+
+        .col2 {
+            color: #7e9081;
+        }
+
+        .col3 {
+            color: #223249;
+        }
+
+        .col4 {
+            color: #c9ab82;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        #header a:hover {
+            color: #86945e;
+        }
+
+        #banner {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .imgcontainer {
+            position: relative;
+            overflow: hidden;
+            max-width: 242px;
+            max-height: 365px;
+            width: 25%;
+            height: auto;
+            float: left;
+            margin: 0 auto;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .dummycontainer {
+            position: relative;
+            overflow: hidden;
+            max-width: 242px;
+            max-height: 365px;
+            width: 25%;
+            height: auto;
+            float: left;
+            margin: 0 auto;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .imgcontainer img {
+            transition: transform 0.3s ease;
+        }
+
+        .zoomimg {
+            max-width: 242px;
+            max-height: 365px;
+            width: 100%;
+            height: auto;
+        }
+
+        .zoomimg:hover {
+            transform: scale(1.2);
+        }
+
+        .dummy {
+            max-width: 242px;
+            max-height: 365px;
+            width: 100%;
+            height: auto;
+            filter: grayscale(70%);
+            opacity: 50%;
+        }
+
+        #page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .item-details {
+            padding: 20px;
+        }
+
+        .grid-item p {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .grid-item button {
+            background-color: #65211e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .grid-item button:hover {
+            background-color: #86945e;
+        }
+
+        #cart {
+            z-index: 2;
+            width: 350px;
+            height: 500px;
+            right: 20px;
+            top: 70px;
+            background-color: #fff;
+            position: fixed;
+            border-radius: 15px;
+            overflow: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        i {
+            cursor: pointer;
+        }
+
+        .itemCart {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .itemCart img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .itemCart h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .itemCart button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .itemCart button:hover {
+            background-color: #ff3333;
+        }
+
+        .itemCart {
+            opacity: 100%;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-body {
+            display: flex;
+        }
+
+        .modal-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .modal-info {
+            flex: 1;
+        }
+
+        .modal-info h2 {
+            margin: 0 0 10px;
+        }
+
+        .modal-info p {
+            margin: 5px 0;
+        }
+
+        .modal-info button {
+            background-color: #65211e;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 30%;
+        }
+
+        .modal-info button:hover {
+            background-color: #86945e;
+        }
+
+        .item-details button {
+            width: 48%;
+            margin-right: 2%;
+        }
+
+        .item-details button:last-child {
+            margin-right: 0;
+        }
+
+        .close {
+            cursor: pointer;
+        }
+
+        #category-select {
+            border-radius: 10px;
+            height: 35px;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        #search-input {
+            border-radius: 10px;
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body style="margin:0px;padding:0px;width:100%;">
+    <div id="header">
+        <h2><a href="KOLOR_WEBSITE.html">kolor</a></h2>
+        <i style='font-size:24px;color:#c9ab82;' class='fas' align="right" onclick="cartshow();">&#xf07a;</i>
+    </div>
+
+    <div id="cart" style="display:none;">
+        <div class="itemCart"></div>
+    </div>
+
+    <div id="page-container" style="width:100%;min-height:100%;">
+        <!-- banner or header -->
+        <img src="bannershop.jpg" id="banner">
+
+        <!-- catagories -->
+        <h2 class="col3" align="center">what type of clothing do you seek?&nbsp;&nbsp;&nbsp;&nbsp;<input
+                placeholder="search" style="border-radius:10px;height:25px;" id="search-input"></h2>
+
+        <div style="margin:0 auto;overflow-x:hidden;" id="stuffcontainer">
+
+            <div class="dummycontainer">
+                <img class="dummy" src="https://kolor.jp/wp/wp-content/uploads/2023/12/03.jpg">
+            </div>
+
+            <div class="imgcontainer">
+                <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/09.jpg">
+            </div>
+
+            <div class="imgcontainer">
+                <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/13.jpg">
+            </div>
+
+            <div class="imgcontainer">
+                <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/05.jpg">
+            </div>
+
+            <div class="dummycontainer">
+                <img class="dummy" src="https://kolor.jp/wp/wp-content/uploads/2023/12/10.jpg">
+            </div>
+        </div> <br> <br>
+
+        <div style="background-color:#223249;width:100%;height:auto;">
+            <div style="width:90%;height:auto;display: flex;align-items: center;padding: 10px;">
+                <p class="col4" style="margin: 0; padding-right: 10px;">CATEGORIES:</p>
+                <select id="category-select"
+                    style="border-radius:10px;height:35px; font-size: 16px; margin-right: 20px;">
+                    <option value="all">All Categories</option>
+                    <option value="bestseller">Bestsellers</option>
+                </select>
+            </div>
+            <div class="grid">
+            </div>
         </div>
+    </div>
 
-        <div id="cart" style="display:none;">
-            <div class="itemCart"></div>
-        </div>
-
-        <div id="page-container" style="width:100%;min-height:100%;">
-            <!-- banner or header -->
-            <img src="bannershop.jpg" id="banner">
-
-            <!-- catagories -->
-            <h2 class="col3" align="center">what type of clothing do you seek?&nbsp;&nbsp;&nbsp;&nbsp;<input placeholder="search" style="border-radius:10px;height:25px;" id="search-input"></h2>
-
-            <div style="margin:0 auto;overflow-x:hidden;" id="stuffcontainer">
-
-                <div class="dummycontainer">
-                    <img class="dummy" src="https://kolor.jp/wp/wp-content/uploads/2023/12/03.jpg">
-                </div>
-
-                <div class="imgcontainer">
-                    <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/09.jpg">
-                </div>
-
-                <div class="imgcontainer">
-                    <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/13.jpg">
-                </div>
-
-                <div class="imgcontainer">
-                    <img class="zoomimg" src="https://kolor.jp/wp/wp-content/uploads/2023/12/05.jpg">
-                </div>
-
-                <div class="dummycontainer">
-                    <img class="dummy" src="https://kolor.jp/wp/wp-content/uploads/2023/12/10.jpg">
-                </div>
-            </div> <br> <br>
-
-            <div style="background-color:#223249;width:100%;height:auto;">
-                <div class="grid">
+    <div id="product-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <br>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Product Image" class="modal-image" />
+                <div class="modal-info">
+                    <h2 id="modal-name"></h2>
+                    <p id="modal-description"></p>
+                    <br>
+                    <p id="modal-price"></p>
+                    <button id="modal-add-to-cart" onclick="addToCartFromModal()">Add to Cart</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            let items = [
-                {
-                    "name":"Beige Modern Coat",
-                    "catagory":"jacket",
-                    "id":1,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/01.jpg"
-                },
-                {
-                    "name":"White Beach Coat",
-                    "catagory":"coat",
-                    "id":2,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/02.jpg"
-                },
-                {
-                    "name":"Vintage Long Coat",
-                    "catagory":"coat",
-                    "id":3,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/03.jpg"
-                },
-                {
-                    "name":"Matcha Casual Outfit",
-                    "catagory":"outfit",
-                    "id":4,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/04.jpg"
-                },
-                {
-                    "name":"Dark Beige Jacket",
-                    "catagory":"jacket",
-                    "id":5,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/05.jpg"
-                },
-                {
-                    "name":"Long Cool Coat",
-                    "catagory":"coat",
-                    "id":6,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/06.jpg"
-                },
-                {
-                    "name":"Blue Outfit",
-                    "catagory":"outfit",
-                    "id":7,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/07.jpg"
-                },
-                {
-                    "name":"Cool Light Outfit",
-                    "catagory":"outfit",
-                    "id":8,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/08.jpg"
-                },
-                {
-                    "name":"Colorful Sports Jacket",
-                    "catagory":"jacket",
-                    "id":9,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/09.jpg"
-                },
-                {
-                    "name":"Green Fluffy Jacket",
-                    "catagory":"jacket",
-                    "id":10,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/10.jpg"
-                },
-                {
-                    "name":"Sleeveless Unique Vest",
-                    "catagory":"vest",
-                    "id":11,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/11.jpg"
-                },
-                {
-                    "name":"Bright Casual Coat",
-                    "catagory":"coat",
-                    "id":12,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/12.jpg"
-                },
-                {
-                    "name":"Cyan Fahsionable Coat",
-                    "catagory":"coat",
-                    "id":13,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/13.jpg"
-                },
-                {
-                    "name":"Retro Fashionable Coat",
-                    "catagory":"coat",
-                    "id":14,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/14.jpg"
-                },
-                {
-                    "name":"Simplistic Beige Hoodie",
-                    "catagory":"hoodie",
-                    "id":15,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/15.jpg"
-                },
-                {
-                    "name":"Cool Brown Coat",
-                    "catagory":"coat",
-                    "id":16,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/16.jpg"
-                },
-                {
-                    "name":"Charming Unique Coat",
-                    "catagory":"coat",
-                    "id":17,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/17.jpg"
-                },
-                {
-                    "name":"Bright Yellow Jacket",
-                    "catagory":"jacket",
-                    "id":18,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/18.jpg"
-                },
-                {
-                    "name":"Orange Unique Outfit",
-                    "catagory":"outfit",
-                    "id":19,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/19.jpg"
-                },
-                {
-                    "name":"Long Sleeve Black",
-                    "catagory":"Jacket",
-                    "id":20,
-                    "src":"https://kolor.jp/wp/wp-content/uploads/2023/12/20.jpg"
+    <script>
+        let items = [
+            {
+                "name": "Beige Modern Coat",
+                "category": "jacket",
+                "id": 1,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/01.jpg",
+                "price": 89.99,
+                "description": "A stylish beige coat perfect for modern looks.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "White Beach Coat",
+                "category": "coat",
+                "id": 2,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/02.jpg",
+                "price": 59.99,
+                "description": "Lightweight coat ideal for beach outings.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Vintage Long Coat",
+                "category": "coat",
+                "id": 3,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/03.jpg",
+                "price": 79.99,
+                "description": "A vintage long coat that adds elegance to any outfit.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Matcha Casual Outfit",
+                "category": "outfit",
+                "id": 4,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/04.jpg",
+                "price": 39.99,
+                "description": "A casual outfit perfect for relaxed days.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Dark Beige Jacket",
+                "category": "jacket",
+                "id": 5,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/05.jpg",
+                "price": 69.99,
+                "description": "A dark beige jacket that complements any style.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Long Cool Coat",
+                "category": "coat",
+                "id": 6,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/06.jpg",
+                "price": 99.99,
+                "description": "A long coat that keeps you warm and stylish.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Blue Outfit",
+                "category": "outfit",
+                "id": 7,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/07.jpg",
+                "price": 49.99,
+                "description": "A trendy blue outfit for casual outings.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Cool Light Outfit",
+                "category": "outfit",
+                "id": 8,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/08.jpg",
+                "price": 44.99,
+                "description": "A light outfit perfect for warm weather.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Colorful Sports Jacket",
+                "category": "jacket",
+                "id": 9,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/09.jpg",
+                "price": 74.99,
+                "description": "A colorful sports jacket for active days.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Green Fluffy Jacket",
+                "category": "jacket",
+                "id": 10,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/10.jpg",
+                "price": 59.99,
+                "description": "A fluffy green jacket that provides warmth and style.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Sleeveless Unique Vest",
+                "category": "vest",
+                "id": 11,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/11.jpg",
+                "price": 29.99,
+                "description": "A unique sleeveless vest for layering.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Bright Casual Coat",
+                "category": "coat",
+                "id": 12,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/12.jpg",
+                "price": 79.99,
+                "description": "A bright casual coat for everyday wear.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Cyan Fashionable Coat",
+                "category": "coat",
+                "id": 13,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/13.jpg",
+                "price": 89.99,
+                "description": "A fashionable cyan coat that stands out.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Retro Fashionable Coat",
+                "category": "coat",
+                "id": 14,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/14.jpg",
+                "price": 99.99,
+                "description": "A retro coat that adds a vintage touch to your wardrobe.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Simplistic Beige Hoodie",
+                "category": "hoodie",
+                "id": 15,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/15.jpg",
+                "price": 39.99,
+                "description": "A simplistic hoodie for a casual look.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Cool Brown Coat",
+                "category": "coat",
+                "id": 16,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/16.jpg",
+                "price": 89.99,
+                "description": "A cool brown coat that fits any occasion.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Charming Unique Coat",
+                "category": "coat",
+                "id": 17,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/17.jpg",
+                "price": 79.99,
+                "description": "A charming coat that adds flair to your outfit.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Bright Yellow Jacket",
+                "category": "jacket",
+                "id": 18,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/18.jpg",
+                "price": 49.99,
+                "description": "A bright yellow jacket for a pop of color.",
+                "bestseller": false,
+                "promotion": true
+            },
+            {
+                "name": "Orange Unique Outfit",
+                "category": "outfit",
+                "id": 19,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/19.jpg",
+                "price": 54.99,
+                "description": "An orange outfit that stands out in any crowd.",
+                "bestseller": true,
+                "promotion": false
+            },
+            {
+                "name": "Long Sleeve Black Jacket",
+                "category": "jacket",
+                "id": 20,
+                "src": "https://kolor.jp/wp/wp-content/uploads/2023/12/20.jpg",
+                "price": 64.99,
+                "description": "A classic long sleeve black jacket for versatile styling.",
+                "bestseller": false,
+                "promotion": true
+            }
+        ];
+
+        const gridContainer = document.querySelector('.grid');
+
+        function createGridItem(item) {
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('grid-item');
+
+            const image = document.createElement('img');
+            image.src = item.src;
+            image.alt = item.name;
+
+            const itemDetails = document.createElement('div');
+            itemDetails.classList.add('item-details');
+
+            const name = document.createElement('p');
+            name.textContent = item.name;
+
+            const addToCartButton = document.createElement('button');
+            addToCartButton.textContent = "Add to Cart";
+            addToCartButton.addEventListener('click', () => {
+                addToCart(item.id);
+            });
+
+            const learnMoreButton = document.createElement('button');
+            learnMoreButton.textContent = "Learn More";
+            learnMoreButton.style.backgroundColor = "#4CAF50";
+            learnMoreButton.style.color = "white";
+            learnMoreButton.addEventListener('click', () => {
+                showModal(item);
+            });
+
+            itemDetails.appendChild(name);
+            itemDetails.appendChild(addToCartButton);
+            itemDetails.appendChild(learnMoreButton);
+
+            gridItem.appendChild(image);
+            gridItem.appendChild(itemDetails);
+
+            return gridItem;
+        }
+
+        items.forEach(item => {
+            const gridItem = createGridItem(item);
+            gridContainer.appendChild(gridItem);
+        });
+
+        const categorySelect = document.getElementById('category-select');
+        const categories = [...new Set(items.map(item => item.category))];
+
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            categorySelect.appendChild(option);
+        });
+
+        // Filtering logic
+        const gridItems = document.querySelectorAll('.grid-item');
+        categorySelect.addEventListener('change', (event) => {
+            const selectedCategory = event.target.value;
+            console.log("Selected Category:", selectedCategory);
+            gridItems.forEach(item => {
+                const itemName = item.querySelector('p').textContent.toLowerCase();
+                const itemData = items.find(i => i.name.toLowerCase() === itemName);
+
+                if (itemData) {
+                    const itemCategory = itemData.category;
+
+                    console.log("Item Name:", itemName, "Item Category:", itemCategory);
+
+                    if (selectedCategory === 'all' ||
+                        (selectedCategory === 'bestseller' && itemData.bestseller) ||
+                        itemCategory === selectedCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else {
+                    console.log("Item data not found for:", itemName);
                 }
-            ];
+            });
+        });
 
-            const gridContainer = document.querySelector('.grid');
+        const searchInput = document.getElementById('search-input');
 
-            function createGridItem(item) {
-                const gridItem = document.createElement('div');
-                gridItem.classList.add('grid-item');
+        gridContainer = document.querySelector('.grid');
 
-                const image = document.createElement('img');
-                image.src = item.src;
-                image.alt = item.name;
+        searchInput.addEventListener('input', (event) => {
+            const query = event.target.value.toLowerCase();
+            const filteredItems = items.filter(item =>
+                item.name.toLowerCase().includes(query) ||
+                item.catagory.toLowerCase().includes(query)
+            );
 
-                const itemDetails = document.createElement('div');
-                itemDetails.classList.add('item-details');
+            gridContainer.innerHTML = '';
 
-                const name = document.createElement('p');
-                name.textContent = item.name;
-
-                const button = document.createElement('button');
-                button.textContent = "Add to Cart";
-
-                button.addEventListener('click', () => {
-                    addToCart(item.id);
-                });
-
-                itemDetails.appendChild(name);
-                itemDetails.appendChild(button);
-
-                gridItem.appendChild(image);
-                gridItem.appendChild(itemDetails);
-
-                return gridItem;
-            };
-
-            items.forEach(item => {
+            filteredItems.forEach(item => {
                 const gridItem = createGridItem(item);
                 gridContainer.appendChild(gridItem);
             });
 
-            const searchInput = document.getElementById('search-input');
-       
-            gridContainer = document.querySelector('.grid');
+            const placeholdersNeeded = 3 - (filteredItems.length % 3);
+            if (placeholdersNeeded < 3) {
+                for (let i = 0; i < placeholdersNeeded; i++) {
+                    const placeholder = document.createElement('div');
+                    placeholder.classList.add('grid-item', 'placeholder');
+                    placeholder.style.visibility = 'hidden';
+                    gridContainer.appendChild(placeholder);
+                }
+            }
+        });
 
-            searchInput.addEventListener('input', (event) => {
-                const query = event.target.value.toLowerCase();
-                const filteredItems = items.filter(item => 
-                    item.name.toLowerCase().includes(query) || 
-                    item.catagory.toLowerCase().includes(query)
-                );
+        window.onload = function () {
+            console.log("Page loaded, updating cart");
+            updateCart();
+        };
 
-                gridContainer.innerHTML = '';
+        function addToCart(productId) {
+            let cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
 
-                filteredItems.forEach(item => {
-                    const gridItem = createGridItem(item);
-                    gridContainer.appendChild(gridItem);
-                });
+            cartItems1.push(productId);
 
-                const placeholdersNeeded = 3 - (filteredItems.length % 3);
-                if (placeholdersNeeded < 3) {
-                    for (let i = 0; i < placeholdersNeeded; i++) {
-                        const placeholder = document.createElement('div');
-                        placeholder.classList.add('grid-item', 'placeholder');
-                        placeholder.style.visibility = 'hidden';
-                        gridContainer.appendChild(placeholder);
+            localStorage.setItem('cartItems1', JSON.stringify(cartItems1));
+
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
+            const cartElement = document.getElementById('cart');
+            cartElement.innerHTML = '<h3>Shopping Cart</h3>';
+
+            if (cartItems1.length === 0) {
+                cartElement.innerHTML += "<p>Your cart is empty.</p>";
+            } else {
+                cartItems1.forEach((productId, index) => {
+                    const product = items.find(item => item.id === parseInt(productId));
+
+                    if (product) {
+                        const itemCart = document.createElement('div');
+                        itemCart.classList.add('itemCart');
+
+                        const image = document.createElement('img');
+                        image.src = product["src"];
+
+                        const itemInfo = document.createElement('div');
+
+                        const name = document.createElement('h4');
+                        name.textContent = product["name"];
+
+                        const removeButton = document.createElement('button');
+                        removeButton.textContent = "Remove";
+                        removeButton.addEventListener('click', () => {
+                            removeFromCart(index);
+                        });
+
+                        itemInfo.appendChild(name);
+                        itemInfo.appendChild(removeButton);
+
+                        itemCart.appendChild(image);
+                        itemCart.appendChild(itemInfo);
+
+                        cartElement.appendChild(itemCart);
                     }
-                }
-            });
+                });
+            }
+        }
 
-            window.onload = function () {
-                console.log("Page loaded, updating cart");
-                updateCart();
-            };
+        function cartshow() {
+            let cartUI = document.getElementById("cart");
+            console.log("Cart display before toggle:", cartUI.style.display);
 
-            function addToCart(productId) {
-                let cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
-
-                cartItems1.push(productId);
-
-                localStorage.setItem('cartItems1', JSON.stringify(cartItems1));
-
-                updateCart();
+            if (cartUI.style.display == "none" || cartUI.style.display == "") {
+                cartUI.style.display = "block";
+            } else {
+                cartUI.style.display = "none";
             }
 
-            function updateCart() {
-                const cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
-                const cartElement = document.getElementById('cart');
-                cartElement.innerHTML = '<h3>Shopping Cart</h3>'; 
+            console.log("Cart display after toggle:", cartUI.style.display);
+        }
 
-                if (cartItems1.length === 0) {
-                    cartElement.innerHTML += "<p>Your cart is empty.</p>";
-                } else {
-                    cartItems1.forEach((productId, index) => {
-                        const product = items.find(item => item.id === parseInt(productId));
+        function removeFromCart(index) {
+            let cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
 
-                        if (product) {
-                            const itemCart = document.createElement('div');
-                            itemCart.classList.add('itemCart');
+            cartItems1.splice(index, 1);
 
-                            const image = document.createElement('img');
-                            image.src = product["src"];
+            localStorage.setItem('cartItems1', JSON.stringify(cartItems1));
 
-                            const itemInfo = document.createElement('div');
-                            
-                            const name = document.createElement('h4');
-                            name.textContent = product["name"];
+            updateCart();
+        }
 
-                            const removeButton = document.createElement('button');
-                            removeButton.textContent = "Remove";
-                            removeButton.addEventListener('click', () => {
-                                removeFromCart(index);
-                            });
+        function showModal(item) {
+            document.getElementById('modal-image').src = item.src;
+            document.getElementById('modal-name').textContent = item.name;
+            document.getElementById('modal-description').textContent = item.description;
+            document.getElementById('modal-price').textContent = `Price: $${item.price.toFixed(2)}`;
+            document.getElementById('product-modal').style.display = 'block';
+        }
 
-                            itemInfo.appendChild(name);
-                            itemInfo.appendChild(removeButton);
+        function closeModal() {
+            document.getElementById('product-modal').style.display = 'none';
+        }
 
-                            itemCart.appendChild(image);
-                            itemCart.appendChild(itemInfo);
+        function addToCartFromModal() {
+            const productId = items.find(item => item.name === document.getElementById('modal-name').textContent).id;
+            addToCart(productId);
+            closeModal();
+        }
+    </script>
+</body>
 
-                            cartElement.appendChild(itemCart);
-                        }
-                    });
-                }
-            }
-
-            function cartshow() {
-                let cartUI = document.getElementById("cart");
-                console.log("Cart display before toggle:", cartUI.style.display);
-
-                if (cartUI.style.display == "none" || cartUI.style.display == "") {
-                    cartUI.style.display = "block";
-                } else {
-                    cartUI.style.display = "none";
-                }
-
-                console.log("Cart display after toggle:", cartUI.style.display);
-            }
-
-            function removeFromCart(index) {
-                let cartItems1 = JSON.parse(localStorage.getItem('cartItems1')) || [];
-    
-                cartItems1.splice(index, 1);
-
-                localStorage.setItem('cartItems1', JSON.stringify(cartItems1));
-
-                updateCart();
-            }
-        </script>
-    </body>
 </html>
