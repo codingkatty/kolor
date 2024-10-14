@@ -236,6 +236,22 @@
                 background: rgba(255, 255, 255, 0.2);
                 pointer-events: none;
             }
+            .video-banner {
+                position: fixed;
+                right: 20px;
+                top: 0;
+                z-index: 10;
+                width: 560px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .video-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         </style>
     </head>
     <body style="overflow:clip;margin:0px;padding:0px;width:100%;">
@@ -280,8 +296,12 @@
         <div class="gradient bottom"></div>
     </div>
 
-    <div style="float:center;width:400px;;margin:0 auto;margin-left:25%;margin-top:150px;position:fixed;">
-            <h3 style="font-size:30px;color:#d0b084;">KOLOR: Fan Edition</h3> <hr style="height:5px;background-color:#65211e;">
+    <div style="float:center;width:400px;margin:0 auto;margin-left:25%;margin-top:150px;position:fixed;">
+            <h3 style="font-size:30px;color:#d0b084;margin-bottom:10px;">KOLOR: Fan Edition</h3> 
+            <p style="color:black;">"Art in Motion, Crafted with Precision."</p>
+
+            <hr style="height:5px;background-color:#65211e;">
+            
             <p style="font-size:20px;">
                 <b class="col2"> Shop Now </b> <br><br>
                 <a class="col2" href="SHOPW.html" style="text-decoration:none;">WOMEN</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -321,6 +341,18 @@
             });
         });
     </script>
+
+    <div class="video-banner">
+        <div class="video-container" style="top: calc(50% - 50px);">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/URx72wMktfY?si=hqBs2UyzZgBiQFSh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-container" style="top: calc(50% + 300px);">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yLHeMASKwW4?si=3jJc2qY83y-g4JLD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-container" style="top: calc(50% + 650px);">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/72TaQWvgl-o?si=gvT4Sw35ImkAcQX9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 
     </body>
 </html>
